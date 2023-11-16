@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}  {{item.name}} {% endblock %}
+
+{% block content %}
+<div class="grid grid-cols-5 gap-6">
+    {% if item.image.is_valid %}
+    <div class="col-span-3">
+        <img src="{{item.image.url}}" class="rounded-t-xl">
+    </div>
+    {% endif %}
+    <div class="col-span-2">
+
+    </div>
+</div>
+{% endblock %}
